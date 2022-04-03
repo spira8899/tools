@@ -1,0 +1,61 @@
+ .jqis{
+     position:relative;
+}
+
+ .jqis_header{
+     background-image: url('dropdown_arrow.png');
+     background-position: right center;
+     background-repeat:no-repeat;
+     cursor:pointer;
+}
+
+.jqis_header img{
+     cursor:pointer;
+}
+
+.jqis_dropdown{
+    padding: 5px;
+    position:absolute;
+    overflow-x:hidden;
+    overflow-y:scroll;
+}
+
+.jqis_dropdown img{
+    margin-right:3px;
+    cursor:pointer;
+    float:left;
+}
+table{
+    border-spacing:10px;
+}
+table,td{
+    border-collapse: separate;
+    border:1px solid #333;
+}
+td{
+    text-align: center;
+}
+
+input{
+	height:30px;
+}
+#playerName{
+	height:30px;
+}
+#player{
+	height:20px;
+}
+#job_village{
+	background-color:#66CC33;
+	width:120px;
+}
+#job_villain{
+	background: linear-gradient(-45deg, #6699FF 0%, #6699FF 50%, #CC3333 50%, #CC3333 100%);
+	width:120px;
+}
+#imposter{
+	background-color:#CC3333;
+}
+#neutral{
+	background-color:#6699FF;
+}

@@ -1,0 +1,4479 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>ImageSelect</title>
+
+  <script type="text/javascript" src="jquery-1.6.1.min.js"></script>
+  <script type="text/javascript" src="imageselect.js"></script>
+
+  <link href="imageselect.css" media="screen" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+<table>
+<thead>
+	<td>プレイヤー名</td>
+	<td>職業</td>
+	<td>1日目</td>
+	<td>2日目</td>
+	<td>3日目</td>
+	<td>4日目</td>
+	<td>5日目</td>
+</thead>
+<tbody>
+
+	<!--　　　　　　　　　　　　　　　　　　　列区切り　　　　　　　　　　　　　　　　　　　　　　-->
+<tr>
+	<td>
+	<!--<input type="text" id="player" name="player" required size="10">-->
+	<select id="playerName">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	</td>
+	
+	<td>
+	<select name="logo0">
+		<option value="0">image/0_none.jpg</option>
+		<option value="1">image/1_baka.jpg</option>
+		<option value="2">image/2_docter.jpg</option>
+		<option value="3">image/3_bremer.jpg</option>
+		<option value="4">image/4_cleaner.jpg</option>
+		<option value="5">image/5_nezumi.jpg</option>
+		<option value="6">image/6_police.jpg</option>
+		<option value="7">image/7_trapper.jpg</option>
+		<option value="8">image/8_lookout.jpg</option>
+		<option value="9">image/9_investigator.jpg</option>
+		<option value="10">image/10_tyohatsu.jpg</option>
+		<option value="11">image/11_serialKiller.jpg</option>
+		<option value="12">image/12_bomber.jpg</option>
+		<option value="13">image/13_survivor.jpg</option>
+		<option value="14">image/14_thief.jpg</option>
+	</select>
+	</td>
+	
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+	
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+</tr>
+
+	<!--　　　　　　　　　　　　　　　　　　　列区切り　　　　　　　　　　　　　　　　　　　　　　-->
+<tr>
+	<td>
+	<!--<input type="text" id="player" name="player" required size="10">-->
+	<select id="playerName">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	</td>
+	
+	<td>
+	<select name="logo1">
+		<option value="0">image/0_none.jpg</option>
+		<option value="1">image/1_baka.jpg</option>
+		<option value="2">image/2_docter.jpg</option>
+		<option value="3">image/3_bremer.jpg</option>
+		<option value="4">image/4_cleaner.jpg</option>
+		<option value="5">image/5_nezumi.jpg</option>
+		<option value="6">image/6_police.jpg</option>
+		<option value="7">image/7_trapper.jpg</option>
+		<option value="8">image/8_lookout.jpg</option>
+		<option value="9">image/9_investigator.jpg</option>
+		<option value="10">image/10_tyohatsu.jpg</option>
+		<option value="11">image/11_serialKiller.jpg</option>
+		<option value="12">image/12_bomber.jpg</option>
+		<option value="13">image/13_survivor.jpg</option>
+		<option value="14">image/14_thief.jpg</option>
+	</select>
+	</td>
+	
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+	
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+</tr>
+
+	<!--　　　　　　　　　　　　　　　　　　　列区切り　　　　　　　　　　　　　　　　　　　　　　-->
+<tr>
+	<td>
+	<!--<input type="text" id="player" name="player" required size="10">-->
+	<select id="playerName">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	</td>
+	
+	<td>
+	<select name="logo2">
+		<option value="0">image/0_none.jpg</option>
+		<option value="1">image/1_baka.jpg</option>
+		<option value="2">image/2_docter.jpg</option>
+		<option value="3">image/3_bremer.jpg</option>
+		<option value="4">image/4_cleaner.jpg</option>
+		<option value="5">image/5_nezumi.jpg</option>
+		<option value="6">image/6_police.jpg</option>
+		<option value="7">image/7_trapper.jpg</option>
+		<option value="8">image/8_lookout.jpg</option>
+		<option value="9">image/9_investigator.jpg</option>
+		<option value="10">image/10_tyohatsu.jpg</option>
+		<option value="11">image/11_serialKiller.jpg</option>
+		<option value="12">image/12_bomber.jpg</option>
+		<option value="13">image/13_survivor.jpg</option>
+		<option value="14">image/14_thief.jpg</option>
+	</select>
+	</td>
+	
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+	
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+</tr>
+
+	<!--　　　　　　　　　　　　　　　　　　　列区切り　　　　　　　　　　　　　　　　　　　　　　-->
+<tr>
+	<td>
+	<!--<input type="text" id="player" name="player" required size="10">-->
+	<select id="playerName">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	</td>
+	
+	<td>
+	<select name="logo3">
+		<option value="0">image/0_none.jpg</option>
+		<option value="1">image/1_baka.jpg</option>
+		<option value="2">image/2_docter.jpg</option>
+		<option value="3">image/3_bremer.jpg</option>
+		<option value="4">image/4_cleaner.jpg</option>
+		<option value="5">image/5_nezumi.jpg</option>
+		<option value="6">image/6_police.jpg</option>
+		<option value="7">image/7_trapper.jpg</option>
+		<option value="8">image/8_lookout.jpg</option>
+		<option value="9">image/9_investigator.jpg</option>
+		<option value="10">image/10_tyohatsu.jpg</option>
+		<option value="11">image/11_serialKiller.jpg</option>
+		<option value="12">image/12_bomber.jpg</option>
+		<option value="13">image/13_survivor.jpg</option>
+		<option value="14">image/14_thief.jpg</option>
+	</select>
+	</td>
+	
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+	
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+</tr>
+
+	<!--　　　　　　　　　　　　　　　　　　　列区切り　　　　　　　　　　　　　　　　　　　　　　-->
+<tr>
+	<td>
+	<!--<input type="text" id="player" name="player" required size="10">-->
+	<select id="playerName">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	</td>
+	
+	<td>
+	<select name="logo4">
+		<option value="0">image/0_none.jpg</option>
+		<option value="1">image/1_baka.jpg</option>
+		<option value="2">image/2_docter.jpg</option>
+		<option value="3">image/3_bremer.jpg</option>
+		<option value="4">image/4_cleaner.jpg</option>
+		<option value="5">image/5_nezumi.jpg</option>
+		<option value="6">image/6_police.jpg</option>
+		<option value="7">image/7_trapper.jpg</option>
+		<option value="8">image/8_lookout.jpg</option>
+		<option value="9">image/9_investigator.jpg</option>
+		<option value="10">image/10_tyohatsu.jpg</option>
+		<option value="11">image/11_serialKiller.jpg</option>
+		<option value="12">image/12_bomber.jpg</option>
+		<option value="13">image/13_survivor.jpg</option>
+		<option value="14">image/14_thief.jpg</option>
+	</select>
+	</td>
+	
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+	
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+</tr>
+
+	<!--　　　　　　　　　　　　　　　　　　　列区切り　　　　　　　　　　　　　　　　　　　　　　-->
+<tr>
+	<td>
+	<!--<input type="text" id="player" name="player" required size="10">-->
+	<select id="playerName">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	</td>
+	
+	<td>
+	<select name="logo5">
+		<option value="0">image/0_none.jpg</option>
+		<option value="1">image/1_baka.jpg</option>
+		<option value="2">image/2_docter.jpg</option>
+		<option value="3">image/3_bremer.jpg</option>
+		<option value="4">image/4_cleaner.jpg</option>
+		<option value="5">image/5_nezumi.jpg</option>
+		<option value="6">image/6_police.jpg</option>
+		<option value="7">image/7_trapper.jpg</option>
+		<option value="8">image/8_lookout.jpg</option>
+		<option value="9">image/9_investigator.jpg</option>
+		<option value="10">image/10_tyohatsu.jpg</option>
+		<option value="11">image/11_serialKiller.jpg</option>
+		<option value="12">image/12_bomber.jpg</option>
+		<option value="13">image/13_survivor.jpg</option>
+		<option value="14">image/14_thief.jpg</option>
+	</select>
+	</td>
+	
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+	
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+</tr>
+
+	<!--　　　　　　　　　　　　　　　　　　　列区切り　　　　　　　　　　　　　　　　　　　　　　-->
+<tr>
+	<td>
+	<!--<input type="text" id="player" name="player" required size="10">-->
+	<select id="playerName">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	</td>
+	
+	<td>
+	<select name="logo6">
+		<option value="0">image/0_none.jpg</option>
+		<option value="1">image/1_baka.jpg</option>
+		<option value="2">image/2_docter.jpg</option>
+		<option value="3">image/3_bremer.jpg</option>
+		<option value="4">image/4_cleaner.jpg</option>
+		<option value="5">image/5_nezumi.jpg</option>
+		<option value="6">image/6_police.jpg</option>
+		<option value="7">image/7_trapper.jpg</option>
+		<option value="8">image/8_lookout.jpg</option>
+		<option value="9">image/9_investigator.jpg</option>
+		<option value="10">image/10_tyohatsu.jpg</option>
+		<option value="11">image/11_serialKiller.jpg</option>
+		<option value="12">image/12_bomber.jpg</option>
+		<option value="13">image/13_survivor.jpg</option>
+		<option value="14">image/14_thief.jpg</option>
+	</select>
+	</td>
+	
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+	
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+</tr>
+
+	<!--　　　　　　　　　　　　　　　　　　　列区切り　　　　　　　　　　　　　　　　　　　　　　-->
+<tr>
+	<td>
+	<!--<input type="text" id="player" name="player" required size="10">-->
+	<select id="playerName">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	</td>
+	
+	<td>
+	<select name="logo7">
+		<option value="0">image/0_none.jpg</option>
+		<option value="1">image/1_baka.jpg</option>
+		<option value="2">image/2_docter.jpg</option>
+		<option value="3">image/3_bremer.jpg</option>
+		<option value="4">image/4_cleaner.jpg</option>
+		<option value="5">image/5_nezumi.jpg</option>
+		<option value="6">image/6_police.jpg</option>
+		<option value="7">image/7_trapper.jpg</option>
+		<option value="8">image/8_lookout.jpg</option>
+		<option value="9">image/9_investigator.jpg</option>
+		<option value="10">image/10_tyohatsu.jpg</option>
+		<option value="11">image/11_serialKiller.jpg</option>
+		<option value="12">image/12_bomber.jpg</option>
+		<option value="13">image/13_survivor.jpg</option>
+		<option value="14">image/14_thief.jpg</option>
+	</select>
+	</td>
+	
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+	
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+</tr>
+
+	<!--　　　　　　　　　　　　　　　　　　　列区切り　　　　　　　　　　　　　　　　　　　　　　-->
+<tr>
+	<td>
+	<!--<input type="text" id="player" name="player" required size="10">-->
+	<select id="playerName">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	</td>
+	
+	<td>
+	<select name="logo8">
+		<option value="0">image/0_none.jpg</option>
+		<option value="1">image/1_baka.jpg</option>
+		<option value="2">image/2_docter.jpg</option>
+		<option value="3">image/3_bremer.jpg</option>
+		<option value="4">image/4_cleaner.jpg</option>
+		<option value="5">image/5_nezumi.jpg</option>
+		<option value="6">image/6_police.jpg</option>
+		<option value="7">image/7_trapper.jpg</option>
+		<option value="8">image/8_lookout.jpg</option>
+		<option value="9">image/9_investigator.jpg</option>
+		<option value="10">image/10_tyohatsu.jpg</option>
+		<option value="11">image/11_serialKiller.jpg</option>
+		<option value="12">image/12_bomber.jpg</option>
+		<option value="13">image/13_survivor.jpg</option>
+		<option value="14">image/14_thief.jpg</option>
+	</select>
+	</td>
+	
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+	
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+</tr>
+
+	<!--　　　　　　　　　　　　　　　　　　　列区切り　　　　　　　　　　　　　　　　　　　　　　-->
+<tr>
+	<td>
+	<!--<input type="text" id="player" name="player" required size="10">-->
+	<select id="playerName">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	</td>
+	
+	<td>
+	<select name="logo9">
+		<option value="0">image/0_none.jpg</option>
+		<option value="1">image/1_baka.jpg</option>
+		<option value="2">image/2_docter.jpg</option>
+		<option value="3">image/3_bremer.jpg</option>
+		<option value="4">image/4_cleaner.jpg</option>
+		<option value="5">image/5_nezumi.jpg</option>
+		<option value="6">image/6_police.jpg</option>
+		<option value="7">image/7_trapper.jpg</option>
+		<option value="8">image/8_lookout.jpg</option>
+		<option value="9">image/9_investigator.jpg</option>
+		<option value="10">image/10_tyohatsu.jpg</option>
+		<option value="11">image/11_serialKiller.jpg</option>
+		<option value="12">image/12_bomber.jpg</option>
+		<option value="13">image/13_survivor.jpg</option>
+		<option value="14">image/14_thief.jpg</option>
+	</select>
+	</td>
+	
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+	
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+<!--　　　　デイリー　　　　　　　-->
+	<td>
+	<select id="player">
+		<option value="0">-</option>
+		<option value="1">miocrosoft</option>
+		<option value="2">saltypepper</option>
+		<option value="3">spira</option>
+		<option value="4">stella</option>
+		<option value="5">Tsubaki</option>
+		<option value="5">てかげん</option>
+		<option value="6">Fanchan</option>
+		<option value="7">ひろかん</option>
+		<option value="8">幼稚園中退</option>
+		<option value="9">石塚</option>
+		<option value="10">茜空</option>
+	</select>
+	<font size="2" >の家⇒</font>
+	<select id="result">
+		<option value="0">結果？</option>
+		<option value="1">効果あり</option>
+		<option value="1">なし</option>
+	</select>
+	
+	<br>
+	<font size="2" >訪問者</font>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+		<select id="player">
+			<option value="0">-</option>
+			<option value="1">miocrosoft</option>
+			<option value="2">saltypepper</option>
+			<option value="3">spira</option>
+			<option value="4">stella</option>
+			<option value="5">Tsubaki</option>
+			<option value="5">てかげん</option>
+			<option value="6">Fanchan</option>
+			<option value="7">ひろかん</option>
+			<option value="8">幼稚園中退</option>
+			<option value="9">石塚</option>
+			<option value="10">茜空</option>
+		</select>
+	<br>
+		<select id="job_village">
+			<option value="0">-</option>
+			<option value="1">ドクター</option>
+			<option value="2">ねずみ</option>
+			<option value="3">ポリス</option>
+			<option value="4">トラッパー</option>
+			<option value="5">ルックアウト</option>
+			<option value="6">インベスディゲーター</option>
+			<option value="7">挑発者</option>
+		</select>
+		<select id="job_villain">
+			<option value="0">-</option>
+			<option id="imposter" value="1">ブレイマー</option>
+			<option id="imposter" value="2">クリーナー</option>
+			<option id="imposter" value="3">ねずみ</option>
+			<option id="imposter" value="4">ポリス</option>
+			<option id="imposter" value="5">トラッパー</option>
+			<option id="imposter" value="6">ルックアウト</option>
+			<option id="imposter" value="7">インベスディゲーター</option>
+			<option id="imposter" value="8">挑発者</option>
+			<option id="neutral" value="9">シリアルキラー</option>
+			<option id="neutral" value="10">ボマー</option>
+			<option id="neutral" value="11">サバイバー</option>
+			<option id="neutral" value="12">シーフ</option>
+		</select>
+	</td>
+</tr>
+
+
+<tbody>
+</table>
+
+
+<script type="text/javascript">
+
+	$(document).ready(function(){
+		$('select[name=logo0]').ImageSelect({dropdownWidth:0});
+		$('select[name=logo1]').ImageSelect({dropdownWidth:0});
+		$('select[name=logo2]').ImageSelect({dropdownWidth:0});
+		$('select[name=logo3]').ImageSelect({dropdownWidth:0});
+		$('select[name=logo4]').ImageSelect({dropdownWidth:0});
+		$('select[name=logo5]').ImageSelect({dropdownWidth:0});
+		$('select[name=logo6]').ImageSelect({dropdownWidth:0});
+		$('select[name=logo7]').ImageSelect({dropdownWidth:0});
+		$('select[name=logo8]').ImageSelect({dropdownWidth:0});
+		$('select[name=logo9]').ImageSelect({dropdownWidth:0});
+	});
+</script>
+
+</body>
+
+</html>
